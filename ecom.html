@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Store</title>
+  <link rel="stylesheet" href="ecom.css" />
+</head>
+<body>
+  <h1 class="heading">Product Store</h1>
+  <div class="product-grid">
+    <div class="product" onclick="showDetails(0)">
+      <img src="iphone.jpg" alt="Phone 1" />
+      <h3>iPhone 13 Pro </h3>
+      <p>₹79,999</p>
+    </div>
+    <div class="product" onclick="showDetails(1)">
+      <img src="laptop.jpg" alt="Laptop" />
+      <h3>Asus Expertbook p5</h3>
+      <p>₹1,09,999</p>
+    </div>
+    <div class="product" onclick="showDetails(2)">
+      <img src="tablet.jpg" alt="Tablet" />
+      <h3>Samsung Tablet Z</h3>
+      <p>₹39,999</p>
+    </div>
+    <div class="product" onclick="showDetails(3)">
+      <img src="headphone.jpg" alt="Headphones" />
+      <h3>Boat Noise Cancelling Headphones</h3>
+      <p>₹9,999</p>
+    </div>
+    <div class="product" onclick="showDetails(4)">
+      <img src="watch.jpg" alt="Smartwatch" />
+      <h3>Samsung Smartwatch Elite</h3>
+      <p>₹14,999</p>
+    </div>
+    <div class="product" onclick="showDetails(5)">
+      <img src="canon.jpg" alt="Camera" />
+      <h3>Canon DSLR Camera 500D</h3>
+      <p>₹49,999</p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalDesc"></p>
+      <button id="buybtn">Buy Product</button>
+      <button id="negotiateBtn">Negotiate Price</button>
+     
+    </div>
+  </div>
+  <!-- Chatbot Box -->
+<div id="chat-container" style="display: none;">
+    <div id="chat-box" style="border: 1px solid #ccc; padding: 10px; height: 200px; overflow-y: scroll;"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Ask about price..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+
+  <script src="ecom.js"></script>
+</body>
+</html>
